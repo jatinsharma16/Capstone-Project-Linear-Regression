@@ -1,10 +1,12 @@
 # Capstone-Project-Linear-Regression
-Linear Regression project to predict the Bike Sharing demand at a given hour of the day.
-The rental bike sharing demand deals with the problem of demand and
-supply of the rental bike at any given hour of the day depending on some
-circumstances and environmental factors.
-Since the Rental bikes provide a state
-of comfort to the customer therefore it
-is the duty of the supplier to maintain
-the correct count of bikes at the
-correct hour of the day.
+Recently rental bike demand in urban cities has seen a rapid rise as it provides mobility comfort and convenience to the public. Therefore it becomes really important to make rental bikes available and accessible to the public at the right time. Eventually, providing the city with a stable supply of rental bikes becomes a major concern and it is crucial part to predict the number of bikes required at each hour of the day for a stable supply of rental bikes.
+
+We started the project with some data wrangling which involved cleaning the data, i.e., handling the null values and removing the duplicate values from the dataset. After performing the data cleaning, we performed some basic exploratory data analysis to check how our data looks and to find out the relation between the independent and the dependent variables. We also checked the skewness of each variable so that every variable fit the model.
+
+Some basic libraries that we have used in the project are Numpy and Pandas for basic operations, matplotlib and seaborn for plotting the graphs and some machine learning algorithms provided by the sklearn to make our model, which included functionalities like train_test_split, LinearRegression, ElasticNet, GridSearchCV, RandomForestRegressor, and GradientBoostingRegressor. For analyzing the score, we used metrics like mean_squarred_error and r2_score.
+
+For making the task easy, we made use of a few machine learning algorithms like linear regression, random forest, and finally, gradient boost, which helped us make a model which can predict the count of bikes required at any given hour of the day depending on the environmental factors like the rainfall or snowfall or the temperature or other factors.
+
+The insights that we made while working on the project are first of all, although the dependent column was more normally distributed when we used the cube root transformation, we obtained a better score with the help of log transformation. Humidity, Rainfall, and Snowfall are the columns that showed a negative correlation with the Rental bike count column i.e. the dependent column. The demands for rental bikes are more in the summer season and least in the winter season. If we observe the demand w.r.t. the hour of the day then the busiest hour is 6 in the evening followed by 8 am which is generally the office time for the public.
+
+Finally, the best model we got for prediction is the Gradient Boost model which provides us with an r2 score of 94% as well as an adjusted r2 score of 94%.
